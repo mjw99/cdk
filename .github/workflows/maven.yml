@@ -28,6 +28,7 @@ jobs:
       run: mvn clean install -q
 
   build-sonarcloud:
+    if: github.repository == 'cdk/cdk'
     name: Build sonarcloud and codecov.io
     runs-on: ubuntu-latest
     permissions:
